@@ -25,8 +25,8 @@ public class DBUtils {
 			//создаем процедуру
 			statement.executeUpdate("create procedure max_salary() " +
 			"begin " +
-			"SELECT name, salary FROM employee LIMIT 1 " +
-			"ORDER BY salary DESC " +
+			"SELECT name, salary FROM employee " +
+			"ORDER BY salary DESC LIMIT 1; " +
 			"end");
 			
 			//закрываем соединение с базой данных
